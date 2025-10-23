@@ -1,0 +1,24 @@
+@use "../../styles/partials/colors.module" as colors;
+
+.container {
+    padding: 16px 12px;
+    border-radius: 8px;
+    background-color: colors.$black;
+
+    &.center {
+        text-align: center;
+    }
+
+    &.left {
+        padding-left: 24px;
+        text-align: left;
+    }
+
+    p {
+        color: colors.$secondary-color;
+
+        span {
+            color: colors.$medium-gold;
+        }
+    }
+}

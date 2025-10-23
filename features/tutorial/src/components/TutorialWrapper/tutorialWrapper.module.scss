@@ -1,0 +1,29 @@
+$frame-width: 8px;
+
+.container {
+    position: relative;
+    overflow: visible;
+
+    .frame {
+        top: -$frame-width;
+        left: -$frame-width;
+        width: calc(#{$frame-width * 2} + 100%);
+        z-index: 101;
+        position: absolute;
+        height: calc(#{$frame-width * 2} + 100%);
+        background: white;
+        border-radius: 4px;
+
+        &.gold-frame {
+            border: 2px solid #B19700;
+        }
+    }
+
+    .disable-content-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

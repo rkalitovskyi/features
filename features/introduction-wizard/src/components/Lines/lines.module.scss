@@ -1,0 +1,15 @@
+@use "styles/partials/colors.module.scss" as colors;
+
+.lines {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 43px;
+    width: 100%;
+
+    .line {
+        background-color: colors.$inactive;
+        height: 1px;
+        width: 100%;
+    }
+}

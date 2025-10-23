@@ -1,0 +1,40 @@
+@use "../../../styles/partials/colors.module.scss" as colors;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 294px;
+    z-index: 1;
+
+    p {
+        text-align: center;
+    }
+
+    .info {
+        color: colors.$charcoal;
+    }
+
+    .title {
+        margin-bottom: 8px;
+    }
+
+    .distribution-rate-container {
+        background-color: colors.$mp-light-gray;
+        border-radius: 8px;
+        padding: 20px 20px;
+
+        .percentage {
+            margin-bottom: 16px;
+        }
+    }
+
+    .indicators-info {
+        margin-top: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+}

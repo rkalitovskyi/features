@@ -1,0 +1,101 @@
+@use "styles/partials/colors.module.scss" as colors;
+
+.slider {
+    height: 16px;
+    padding-top: 80px;
+
+    &.green {
+        :global(.MuiSlider-track) {
+            background-color: colors.$success-color;
+        }
+
+        :global(.MuiSlider-thumb) {
+            svg {
+                fill: colors.$success-color;
+            }
+        }
+
+        :global(.MuiSlider-valueLabel) {
+            span {
+                color: colors.$success-color;
+            }
+        }
+
+        .thumb {
+            border: 5px solid colors.$success-color;
+        }
+    }
+
+    &.red {
+        :global(.MuiSlider-track) {
+            background-color: colors.$error-red;
+        }
+
+        :global(.MuiSlider-thumb) {
+            svg {
+                fill: colors.$error-red;
+            }
+        }
+
+        :global(.MuiSlider-valueLabel) {
+            span {
+                color: colors.$error-red;
+            }
+        }
+
+        .thumb {
+            border: 5px solid colors.$error-red;
+        }
+    }
+
+    .thumb {
+        background-color: colors.$secondary-color;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+    }
+
+    :global(.MuiSlider-rail) {
+        background-color: colors.$inactive;
+        opacity: 1;
+    }
+
+    :global(.MuiSlider-track) {
+        opacity: 1;
+        border: none;
+    }
+
+    :global(.MuiSlider-thumb) {
+        width: 29px;
+        height: 29px;
+        background-color: colors.$secondary-color;
+
+        &::before {
+            box-shadow: none;
+        }
+
+        svg {
+            margin-left: -5px;
+            margin-top: -5px;
+        }
+    }
+
+    :global(.MuiSlider-valueLabel) {
+        background-color: transparent;
+        padding: 0;
+
+        span {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 135%;
+
+            .percentage-value {
+                font-size: 20px;
+            }
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+}

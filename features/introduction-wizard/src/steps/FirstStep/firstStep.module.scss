@@ -1,0 +1,53 @@
+$VIDEO_HEIGHT: 416px;
+
+.container {
+    max-width: 740px;
+    margin: 44px 0 24px 0;
+
+    .video-container {
+        margin-bottom: 16px;
+        min-height: $VIDEO_HEIGHT;
+
+        :global(.video-player) {
+            video {
+                min-height: $VIDEO_HEIGHT;
+            }
+
+            :global(.react-player__preview) {
+                min-height: $VIDEO_HEIGHT;
+
+                // important changing react-player play icon
+                :global(.react-player__shadow) {
+                    background: none !important;
+
+                    :global(.react-player__play-icon) {
+                        border-width: 32px 0 32px 52px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .video-description {
+        margin-bottom: 10px;
+        line-height: 135%;
+
+        &:last-of-type {
+            margin-bottom: 32px;
+        }
+    }
+
+    .actions {
+        display: flex;
+        width: 100%;
+        margin: 32px 0 0 0;
+
+        .label {
+            color: #fff;
+        }
+
+        .next {
+            margin-left: auto;
+        }
+    }
+}

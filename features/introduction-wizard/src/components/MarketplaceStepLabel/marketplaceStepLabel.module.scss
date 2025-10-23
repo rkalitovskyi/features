@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+    height: 32px;
+
+    .arrow {
+        position: absolute;
+        left: -30px;
+        top: calc(50% - 6px);
+        border: solid #bdbdbd;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 4px;
+    }
+
+    img {
+        left: calc(50% - 20px);
+        top: -80%;
+        position: absolute;
+    }
+
+    .label {
+        position: absolute;
+        top: 30px;
+        width: 174px;
+        text-align: center;
+        transform: translateX(calc(-50% + 16px));
+    }
+
+    .right {
+        transform: rotate(-45deg);
+    }
+}

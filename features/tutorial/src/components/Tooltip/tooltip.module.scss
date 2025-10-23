@@ -1,0 +1,52 @@
+.container {
+    padding: 0 8px 8px 8px;
+
+    .icon-container {
+        display: flex;
+        justify-content: flex-end;
+
+        .close-icon {
+            cursor: pointer;
+            fill: #848484;
+
+            &:hover {
+                fill: #232121;
+            }
+        }
+    }
+
+    .title {
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    .description {
+        white-space: pre-line;
+        margin-bottom: 16px;
+    }
+
+    .step-section {
+        display: flex;
+        justify-content: space-between;
+
+        .steps {
+            color: #686868;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+
+        .action-text {
+            cursor: pointer;
+            color: #046fdc;
+
+
+            &:active, &:hover {
+                font-weight: 700;
+            }
+        }
+    }
+}

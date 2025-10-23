@@ -1,0 +1,9 @@
+@use "styles/partials/colors.module.scss" as colors;
+
+.container {
+    background-color: colors.$secondary-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 32px;
+}

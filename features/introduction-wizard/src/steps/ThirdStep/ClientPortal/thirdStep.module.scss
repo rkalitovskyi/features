@@ -1,0 +1,29 @@
+@use "styles/partials/colors.module.scss" as colors;
+
+.container {
+    max-width: 980px;
+
+    .header-wrapper {
+        margin: 0 -24px;
+    }
+
+    .sliders-container {
+        margin: 24px 36px 0 36px;
+
+        & > div {
+            display: flex;
+            align-items: center;
+
+            p {
+                width: 290px;
+                margin-right: 16px;
+            }
+        }
+
+        .hint {
+            text-align: center;
+            color: colors.$gold;
+            margin-bottom: 24px;
+        }
+    }
+}

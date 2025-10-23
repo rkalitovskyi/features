@@ -1,0 +1,78 @@
+@use "./breakpoints.module.scss" as mixin;
+@use "./colors.module.scss" as colors;
+@use "../consts.scss" as const;
+
+@mixin line-clamp($max-lines) {
+    display: -webkit-box;
+    -webkit-line-clamp: const.$max-lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+@mixin navigation-tab {
+    background-color: colors.$mp-light-gray;
+    padding: 18px 32px;
+    border-radius: 8px;
+    color: colors.$accessible-text;
+    cursor: pointer;
+
+    &.active {
+        color: colors.$charcoal;
+        position: relative;
+        background: linear-gradient(to top, colors.$gold 4%, rgba(177 151 0 / 10%) 4% 96%);
+    }
+
+    &:hover:not(.active) {
+        color: colors.$charcoal;
+        box-shadow: const.$default-box-shadow;
+
+        :global(.MuiSvgIcon-root) {
+            fill: $charcoal;
+        }
+    }
+}
+
+@mixin card {
+    .general-card {
+        min-width: 280px;
+        max-width: 336px;
+        border-radius: 8px;
+        background-color: colors.$secondary-color;
+        position: relative;
+        margin: 0 auto 32px;
+        display: flex;
+        flex-direction: column;
+
+        .general-card-text {
+            padding: 24px 24px 0;
+
+            p,
+            h3 {
+                margin-bottom: 16px;
+            }
+
+            .card-name {
+                color: colors.$black;
+            }
+
+            .description {
+                color: colors.$charcoal;
+                line-height: 135%;
+                margin-bottom: 0;
+            }
+        }
+
+        @include mixin.breakpoint(desktop) {
+            max-width: 416px;
+            margin: 0;
+        }
+    }
+}
+
+@mixin underline-text {
+    display: inline-block;
+    color: colors.$link-gold;
+    border-bottom: 1px solid colors.$link-gold;
+    line-height: normal;
+}

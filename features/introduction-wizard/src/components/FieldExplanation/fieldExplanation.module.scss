@@ -1,0 +1,26 @@
+@use "styles/partials/colors.module" as colors;
+
+.container {
+    svg {
+        fill: colors.$gold;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+
+        span,
+        button {
+            z-index: 1;
+            background-color: colors.$secondary-color;
+        }
+
+        span {
+            padding-right: 4px;
+        }
+
+        button {
+            padding: 0 8px 0 0;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.card {
+    border-radius: 8px;
+    max-width: 290px;
+    z-index: 1;
+
+    .title {
+        font-weight: 700;
+        background-color: #232121;
+        color: #fff;
+        padding: 12px 24px;
+        text-align: center;
+    }
+
+    .properties {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin: 24px;
+    }
+
+    .goals {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0 24px 24px 24px;
+
+        .goal {
+            display: flex;
+            gap: 4px;
+
+            svg {
+                fill: #b19700;
+            }
+        }
+    }
+}

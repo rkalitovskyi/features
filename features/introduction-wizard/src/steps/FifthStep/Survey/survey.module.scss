@@ -1,0 +1,51 @@
+@use "styles/partials/colors.module.scss" as colors;
+
+.container {
+    p {
+        line-height: 135%;
+    }
+    .legend {
+        color: colors.$charcoal;
+        margin-top: 16px;
+    }
+
+    .answers-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        margin: 24px 0;
+
+        p {
+            white-space: pre-line;
+        }
+
+        .answers {
+            display: flex;
+            gap: 38px;
+        }
+    }
+
+    .questions {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-right: 30px;
+
+        .question {
+            display: flex;
+            flex-direction: row;
+            gap: 92px;
+            justify-content: space-between;
+
+            .label-container {
+                width: 596px;
+
+                .label {
+                    display: flex;
+                    gap: 4px;
+                }
+            }
+        }
+    }
+}

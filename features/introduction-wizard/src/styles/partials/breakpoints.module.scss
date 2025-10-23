@@ -1,0 +1,33 @@
+$mobile: 320;
+$mobile-landscape: 667;
+$tablet: 768;
+$tablet-landscape: 1024;
+$desktop: 1200;
+
+@mixin breakpoint($point) {
+    @if $point == mobile {
+        @media (min-width: #{$mobile}px) {
+            @content;
+        }
+    } @else if $point == mobile_landscape {
+        @media (min-width: #{$mobile_landscape}px) and (orientation: landscape) and (min-aspect-ratio: 13 / 9) {
+            @content;
+        }
+    } @else if $point == tablet {
+        @media (min-width: #{$tablet}px) {
+            @content;
+        }
+    } @else if $point == tablet_landscape {
+        @media (min-width: #{$tablet-landscape}px) {
+            @content;
+        }
+    } @else if $point == desktop {
+        @media (min-width: #{$desktop}px) {
+            @content;
+        }
+    }
+}
+
+:export {
+    desktop: $desktop;
+}

@@ -1,0 +1,80 @@
+@use "../../styles/partials/colors.module.scss" as colors;
+
+.container {
+    max-width: 990px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.expand {
+        max-width: 1200px;
+
+        .header-container {
+            max-width: 990px;
+        }
+    }
+
+    .header-container {
+        width: 100%;
+    }
+
+    p {
+        line-height: 135%;
+    }
+
+    .black-box {
+        padding: 16px 12px;
+        border-radius: 8px;
+        background-color: colors.$black;
+        text-align: center;
+
+        p {
+            color: colors.$secondary-color;
+
+            span {
+                color: colors.$medium-gold;
+            }
+        }
+    }
+
+    .cards {
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 24px;
+        gap: 24px;
+
+        .info-section {
+            align-self: end;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .under-cards-block {
+        display: flex;
+        justify-content: center;
+        margin: 32px 0;
+
+        .indicators {
+            margin-left: -167px;
+            display: flex;
+            gap: 24px;
+        }
+
+        .open-details {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: colors.$gold;
+            font-weight: 500;
+
+            svg {
+                fill: colors.$gold;
+            }
+        }
+    }
+}
