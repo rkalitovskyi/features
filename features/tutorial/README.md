@@ -1,7 +1,9 @@
 # @frontend/tutorial
 
-This library was generated with [Nx](https://nx.dev).
+## Use this package for adding tutorial to your app.
 
-## Running unit tests
 
-Run `nx test @frontend/tutorial` to execute the unit tests via [Vitest](https://vitest.dev/).
+### How to use:
+1. Wrap your container with a `TutorialProvider`.
+2. Wrap your tutorial component with a `TutorialWrapper`.
+3. use `useTutorial` for managing steps.
